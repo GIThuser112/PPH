@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+        }
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Blog</h1>
+    </header>
+
+    <section>
+        <article>
+            <h2>Sample Blog Post</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod ex et consectetur tristique. Mauris bibendum sapien nec eros eleifend, ut fermentum leo lacinia. Suspendisse potenti. Sed accumsan velit id lacus posuere, ac dapibus dui scelerisque.
+            </p>
+            <p>
+                Nulla facilisi. Integer fermentum justo ac nisl semper, id consectetur metus scelerisque. Vestibulum eget nisi vel mi rhoncus euismod. Aliquam vel est eu urna tincidunt ultricies vel ac justo. Sed ac metus vel ligula tincidunt ultricies a in risus.
+            </p>
+        </article>
+    </section>
+</body>
+</html>
