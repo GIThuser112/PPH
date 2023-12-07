@@ -3,44 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Blog</title>
+    <title>My Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
         }
-        header {
+        .tabs {
+            display: flex;
             background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 15px;
         }
-        section {
-            max-width: 800px;
-            margin: 20px auto;
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+        .tab:hover {
+            background-color: #555;
+        }
+        .content {
+            display: none;
             padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        #home-content {
+            display: block;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>My Blog</h1>
-    </header>
+    <div class="tabs">
+        <div class="tab" onclick="openTab('home')">Home</div>
+        <div class="tab" onclick="openTab('publications')">Publications</div>
+        <div class="tab" onclick="openTab('projects')">Projects</div>
+        <div class="tab" onclick="openTab('skills')">Technical skills</div>
+    </div>
+    
+    <div class="content" id="home-content">
+        <h2>Welcome to my Home page</h2>
+        <!-- Add your Home page content here -->
+    </div>
+    
+    <div class="content" id="publications-content">
+        <h2>My Publications</h2>
+        <p>
+            Currently, I do not have any publications, but I am actively working on projects and research that may lead to publications in the future.
+        </p>
+    </div>
+    
+    <div class="content" id="projects-content">
+        <h2>My Projects</h2>
+        <ul>
+            <li><a href="assignment1.pdf">Assignment 1 (Python PDF)</a></li>
+            <li><a href="assignment2.java">Assignment 2 (Java PDF)</a></li>
+            <li><a href="assignment3.pdf">Assignment 3 (Python PDF)</a></li>
+            <li><a href="assignment4.java">Assignment 4 (Java PDF)</a></li>
+            <li><a href="assignment5.pdf">Assignment 5 (Python PDF)</a></li>
+        </ul>
+        <!-- Add descriptions or additional information about your projects here -->
+    </div>
+    
+    <div class="content" id="skills-content">
+        <h2>My Technical Skills</h2>
+        <h3>1. Ethernet Cable Making</h3>
+        <p>
+            I have the expertise to create Ethernet cables from scratch. This skill involves selecting the appropriate cable type, connectors, and using crimping tools to assemble cables. It's essential for networking and ensures reliable data transmission.
+        </p>
 
-    <section>
-        <article>
-            <h2>Sample Blog Post</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin euismod ex et consectetur tristique. Mauris bibendum sapien nec eros eleifend, ut fermentum leo lacinia. Suspendisse potenti. Sed accumsan velit id lacus posuere, ac dapibus dui scelerisque.
-            </p>
-            <p>
-                Nulla facilisi. Integer fermentum justo ac nisl semper, id consectetur metus scelerisque. Vestibulum eget nisi vel mi rhoncus euismod. Aliquam vel est eu urna tincidunt ultricies vel ac justo. Sed ac metus vel ligula tincidunt ultricies a in risus.
-            </p>
-        </article>
-    </section>
+        <h3>2. Python</h3>
+        <p>
+            Python is a versatile and high-level programming language used for web development, data analysis, machine learning, and automation. I am proficient in Python and have used it for various projects.
+        </p>
+
+        <h3>3. C++</h3>
+        <p>
+            C++ is a powerful, object-oriented programming language commonly used for system programming, game development, and performance-critical applications. I have experience in C++ and have developed applications using it.
+        </p>
+
+        <h3>4. Java</h3>
+        <p>
+            Java is a widely-used programming language known for its portability and platform independence. I am proficient in Java and have developed both desktop and web applications using Java technologies.
+        </p>
+
+        <h3>5. HTML5</h3>
+        <p>
+            HTML5 is the latest version of the Hypertext Markup Language used for creating web content. I am skilled in HTML5 and have designed and developed responsive websites and web applications using HTML5 and associated technologies like CSS and JavaScript.
+        </p>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            var i, content;
+            content = document.getElementsByClassName("content");
+            for (i = 0; i < content.length; i++) {
+                content[i].style.display = "none";
+            }
+            document.getElementById(tabName + "-content").style.display = "block";
+        }
+    </script>
 </body>
 </html>
